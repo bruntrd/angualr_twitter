@@ -5,11 +5,7 @@ app.controller('HandleController', function($scope,HandleFactory){
 
 });
 
-//app.factory('RandomNumber', function(){
-//    var randomNum = Math.floor((Math.random()*10));
-//    return randomNum;
-//
-//});
+
 
 app.factory('AdjService', function(){
     var adj = ['slimy', 'delicious', 'empty', 'jolly', 'spicy', 'wide-eyed', 'blue', 'gigantic', 'random', 'yummy' ];
@@ -43,7 +39,7 @@ app.factory('ShuffleFactory', function(AdjService, NounService){
 
 });
 
-app.factory('HandleFactory', function( AdjService,NounService,   ShuffleFactory){
+app.factory('HandleFactory', function( AdjService,NounService,ShuffleFactory){
     ShuffleFactory(AdjService);
     ShuffleFactory(NounService);
 
